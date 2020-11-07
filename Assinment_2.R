@@ -54,7 +54,7 @@ k_cv <- function (X , y, k_fold , eps , lambdas , alpha ){
         X_test <- X[ (1 : m) , ] ;  y_test <- y[ (1 : m) , ]
         
       } else{ 
-        X_train <- X[-((k - 1) * m : (k * m) ), ]; y_train <- y[-((k - 1) * m : k * m ), ]
+        X_train <- X[-((k - 1) * m : (k * m) ), ]; y_train <- y[-((k - 1) * m : (k * m) ), ]
         X_test <- X[ (k - 1) * m : (k * m) , ]; y_test <- y[(k - 1) * m : (k * m) , ]
       }
       beta_k1 <- elastic_net(X_train , y_train , eps , lambda , alpha )
